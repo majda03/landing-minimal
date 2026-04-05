@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valence Advisory</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- GLOBAL ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: 'Inter', sans-serif;
+background:#f6f6f4;
+color:#1c1c1c;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display', serif;
+}
+
+section{
+padding:100px 0;
+}
+
+/* ---------- NAV ---------- */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+border-bottom:1px solid #eee;
+z-index:100;
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-weight:600;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#1c1c1c;
+font-size:14px;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+background-image:url("https://images.unsplash.com/photo-1497366216548-37526070297c");
+background-size:cover;
+background-position:center;
+padding-top:80px;
+}
+
+.hero-content{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(8px);
+padding:50px;
+border-radius:10px;
+max-width:520px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.cta{
+background:#c9a96a;
+border:none;
+padding:14px 28px;
+font-size:15px;
+cursor:pointer;
+}
+
+/* ---------- SERVICES ---------- */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+.service-card{
+background:white;
+padding:40px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.service-card h3{
+margin-bottom:10px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+/* ---------- CASE STUDIES ---------- */
+
+.case-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+.case{
+background:white;
+padding:35px;
+border-radius:10px;
+}
+.contact-form{
+padding:80px 0;
+}
+
+.contact-form form{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:500px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:14px;
+border:1px solid #ddd;
+font-size:15px;
+}
+
+.contact-form textarea{
+height:120px;
+resize:none;
+}
+/* ---------- TESTIMONIAL ---------- */
+
+.testimonial{
+background:white;
+padding:60px;
+text-align:center;
+border-radius:10px;
+max-width:800px;
+margin:auto;
+}
+
+.testimonial p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+/* ---------- CTA ---------- */
+
+.cta-section{
+text-align:center;
+}
+
+.cta-section h2{
+margin-bottom:20px;
+}
+a.cta,
+a.cta:visited {
+  color: #111;           /* ili white ako ti je tamna pozadina */
+  text-decoration: none;
+}
+
+a.cta:hover {
+  text-decoration: none;
+  filter: brightness(1.05);
+}
+
+a.cta:active {
+  color: #111;
+  text-decoration: none;
+}
+
+a.cta:focus-visible {
+  outline: 2px solid rgba(0,0,0,.25);
+  outline-offset: 3px;
+}
+/* ---------- FOOTER ---------- */
+
+footer{
+padding:40px 0;
+text-align:center;
+font-size:14px;
+border-top:1px solid #eee;
+}
+
+/* ---------- ANIMATION ---------- */
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="container nav-inner">
+
+<div class="logo">VALENCE ADVISORY</div>
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#cases">Case Studies</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content fade">
+
+<h1>Strategic clarity for ambitious companies</h1>
+
+<p>
+Helping founders and executives transform complex decisions
+into measurable growth.
+</p>
+
+<button class="cta">Schedule a consultation</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<h2>Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card fade">
+<h3>Business Strategy</h3>
+<p>Market positioning and long-term growth planning.</p>
+</div>
+
+<div class="service-card fade">
+<h3>Operational Efficiency</h3>
+<p>Streamlining internal processes for scalable performance.</p>
+</div>
+
+<div class="service-card fade">
+<h3>Leadership Advisory</h3>
+<p>Supporting executives in high-stakes decisions.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about">
+
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+
+<div class="fade">
+<h2>About</h2>
+<p>
+Over 12 years of experience advising startups and established
+companies across Europe and the Middle East.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CASE STUDIES -->
+
+<section id="cases">
+
+<div class="container">
+
+<h2>Case Studies</h2>
+
+<div class="case-grid">
+
+<div class="case fade">
+<h3>SaaS Expansion</h3>
+<p>Scaling a SaaS company to international markets.</p>
+</div>
+
+<div class="case fade">
+<h3>Retail Transformation</h3>
+<p>Operational restructuring for a retail group.</p>
+</div>
+
+<div class="case fade">
+<h3>AI Strategy</h3>
+<p>Strategic roadmap for an AI startup.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIAL -->
+
+<section>
+
+<div class="container">
+
+<div class="testimonial fade">
+
+<p>
+“Working with Valence Advisory helped us redefine our
+market strategy and scale confidently.”
+</p>
+
+<strong>CEO – Tech Startup</strong>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section id="contact" class="cta-section">
+
+<div class="container fade">
+
+<h2>Let's discuss your next strategic move</h2>
+<a href="#start-project" class="cta">Book a call</a>
+</div>
+
+</section>
+<section id="start-project" class="contact-form">
+  <div class="container">
+    <h2>Start a project</h2>
+
+    <form>
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Email address" required>
+      <textarea placeholder="Tell me about your project"></textarea>
+
+      <button type="submit" class="cta">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+© 2026 Valence Advisory
+</footer>
+
+
+<script>
+
+/* scroll animation */
+
+const elements = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+elements.forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
